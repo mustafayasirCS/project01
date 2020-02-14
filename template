@@ -1,0 +1,54 @@
+From cs101 template prepared by David Davenport.
+
+************************************
+**** simple console application ****
+************************************
+The most basic of "magical incantations" to get you up and running quickly. It includes the code necessary for user input, so you can concentrate on converting your algorithm & memory requirements into Java. Having copied the template into your IDE's editor, simply replace "__program description__", "__your name__" and "__date__" as appropriate, change "XXXX" to the name you want to use for your program, then write your constants, variables and program code in the appropriate sections. 
+
+-------- cut here ------------------------------------
+import java.util.Scanner;
+
+/**
+ * __program description___ 
+ * @author __your name___
+ * @version __date__
+ */ 
+public class XXXX
+{
+   public static void main( String[] args)
+   {
+      Scanner scan = new Scanner( System.in);
+
+      // constants
+
+      // variables
+
+      // program code
+      System.out.println( "Start...");
+
+
+      System.out.println( "End.");
+   }
+
+}
+-------- cut here ------------------------------------
+
+
+************************************
+****      simple Java class     ****
+************************************
+
+-------- cut here ------------------------------------
+/**
+ * A simple Java class!
+ */
+public class XXXX 
+{
+   // properties
+
+   // constructors
+   
+   // methods
+
+}
+-------- cut here ------------------------------------
