@@ -8,7 +8,7 @@
 
 
 ## About javadoc comments
-Use of javadoc comments just before classes, constructors and methods is **mandatory**.
+Usage of javadoc comments just before defining classes, constructors and methods is **mandatory**.
 1. Examples of styling
    * Before Classes
    ```
