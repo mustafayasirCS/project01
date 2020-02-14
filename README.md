@@ -15,7 +15,8 @@ Usage of javadoc comments just before defining classes, constructors and methods
    /**
     * This class (or object) have blah blah blah and can do blah blah blah
     * @author Muhammed Can Küçükaslan
-    * @version 2020.02.14 
+    * @version 2020.02.14 added blah blah featue and fixed blah blah bugs
+    *          2020.01.14 Created with blah blah features and properties 
     */
     public class Example {
     ...
