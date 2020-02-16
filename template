@@ -3,7 +3,13 @@ From cs101 template prepared by David Davenport.
 ************************************
 **** simple console application ****
 ************************************
-The most basic of "magical incantations" to get you up and running quickly. It includes the code necessary for user input, so you can concentrate on converting your algorithm & memory requirements into Java. Having copied the template into your IDE's editor, simply replace "__program description__", "__your name__" and "__date__" as appropriate, change "XXXX" to the name you want to use for your program, then write your constants, variables and program code in the appropriate sections. 
+The most basic of "magical incantations" to get you up and running quickly. 
+It includes the code necessary for user input, 
+so you can concentrate on converting your algorithm & memory requirements into Java. 
+Having copied the template into your IDE's editor, 
+simply replace "__program description__", "__your name__" and "__date__" as appropriate, 
+change "XXXX" to the name you want to use for your program, 
+then write your constants, variables and program code in the appropriate sections. 
 
 -------- cut here ------------------------------------
 import java.util.Scanner;
