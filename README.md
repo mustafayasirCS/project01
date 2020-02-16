@@ -32,11 +32,11 @@
       
       + [SoK paper comparing them (2010)](https://www.usenix.org/legacy/event/fast09/tech/full_papers/plank/plank.pdf)
 + Referance programs & algorithms (Skim them):
-   - https://restic.readthedocs.io/en/latest/100_references.html#design
-   - https://borgbackup.readthedocs.io/en/stable/internals.html
-   - https://www.tarsnap.com/
-   - http://0pointer.net/blog/casync-a-tool-for-distributing-file-system-images.html
-   - https://github.com/systemd/casync/blob/master/README.md
+   - <https://restic.readthedocs.io/en/latest/100_references.html#design>
+   - <https://borgbackup.readthedocs.io/en/stable/internals.html>
+   - <https://www.tarsnap.com/>
+   - <http://0pointer.net/blog/casync-a-tool-for-distributing-file-system-images.html>
+   - <https://github.com/systemd/casync/blob/master/README.md>
 
 #### Android App for Bilkent Library Catalog
 To be explained
