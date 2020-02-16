@@ -26,11 +26,12 @@
       
 + Availability/Durability: We encode the data with a forward error correction algorithm and disturbute it to our back-up targets.
    - Algorithm details & choices:
-      - FEC=[Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
-      - FEC=[RaptorQ](https://github.com/openrq-team/OpenRQ/wiki/%22What-is-RaptorQ%3F%22)
-      + TODO Find SoK paper comparing them.
-         - Found [it](https://www.usenix.org/legacy/event/fast09/tech/full_papers/plank/plank.pdf).
-
+      + FEC=[Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
+      + FEC=[RaptorQ](https://github.com/openrq-team/OpenRQ/wiki/%22What-is-RaptorQ%3F%22)
+      + Hybrid-FEC=[STAIR](https://dl.acm.org/doi/pdf/10.1145/2658991?download=true)
+      
+      + [SoK paper comparing them (2010)](https://www.usenix.org/legacy/event/fast09/tech/full_papers/plank/plank.pdf)
+        
 #### Android App for Bilkent Library Catalog
 To be explained
 
