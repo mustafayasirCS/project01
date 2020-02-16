@@ -11,25 +11,25 @@
    - This is done by deduplication based on [content-defined chunking](https://restic.net/blog/2015-09-12/restic-foundation1-cdc) which is a way to reduce the number of bytes stored and transmitted: Each file is split into a number of variable length chunks and only chunks that have never been seen before are (compressed and) added to the repository.
    - Algorithm details & choices:
       - CDC=[Buzhash](https://en.wikipedia.org/wiki/Rolling_hash#Cyclic_polynomial)
-      - Compression=[Zstandard](https://facebook.github.io/zstd/)<br>
-
+      - Compression=[Zstandard](https://facebook.github.io/zstd/)
+      
++ Confidentiality/Security: We encrypt the data because we assume data the location where the backup data is stored is **not** a trusted environment. 
+   - Algorithm details & choices:
+      - Cipher=[ChaCha20/(8)](https://en.wikipedia.org/wiki/Salsa20#ChaCha_variant)
+      
 + Integrity/Verifiability
    - We validate the data for accidental or intentional tampering (added, modified, deleted, etc.) because we assume data the location where the backup data is stored is **not** a trusted environment.
    - This is done by [cryptographic message authentication codes](https://en.wikipedia.org/wiki/Message_authentication_code). 
    ![Alt text](./MAC.svg)
    - Algorithm details & choices:
-      - MAC=[BLAKE3 hash function (keyed mode)](https://github.com/BLAKE3-team/BLAKE3)<br>
-
-+ Confidentiality/Security: We encrypt the data because we assume data the location where the backup data is stored is **not** a trusted environment. 
-   - Algorithm details & choices:
-      - Cipher=[ChaCha20/(8)](https://en.wikipedia.org/wiki/Salsa20#ChaCha_variant)<br>
-
+      - MAC=[BLAKE3 hash function (keyed mode)](https://github.com/BLAKE3-team/BLAKE3)
+      
 + Availability/Durability: We encode the data with a forward error correction algorithm and disturbute it to our back-up targets.
    - Algorithm details & choices:
       - FEC=[Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
-      - FEC=[RaptorQ](https://en.wikipedia.org/wiki/Raptor_code) <br>
-      TODO Find SoK paper comparing them.<br>
-      Found [it](https://www.usenix.org/legacy/event/fast09/tech/full_papers/plank/plank.pdf).
+      - FEC=[RaptorQ](https://github.com/openrq-team/OpenRQ/wiki/%22What-is-RaptorQ%3F%22)
+      + TODO Find SoK paper comparing them.
+         - Found [it](https://www.usenix.org/legacy/event/fast09/tech/full_papers/plank/plank.pdf).
 
 #### Android App for Bilkent Library Catalog
 To be explained
