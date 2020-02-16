@@ -6,38 +6,43 @@
 
 ##### Main features
 
-+ Efficiency
-   - Definitely read [this](https://www.tarsnap.com/deduplication-explanation.html). Basically only the data that has changed (added, modified, deleted, etc.) is transferred between back-up runs.
-   - This is done by deduplication based on [content-defined chunking](https://restic.net/blog/2015-09-12/restic-foundation1-cdc) which is a way to reduce the number of bytes stored and transmitted: Each file is split into a number of variable length chunks and only chunks that have never been seen before are (compressed and) added to the repository.
-   - Algorithm details & choices:
-      - CDC=[Buzhash](https://en.wikipedia.org/wiki/Rolling_hash#Cyclic_polynomial)
-      - Compression=[Zstandard](https://facebook.github.io/zstd/)
+1. Efficiency
+   * Definitely read [this](https://www.tarsnap.com/deduplication-explanation.html). Basically only the data that has changed (added, modified, deleted, etc.) is transferred between back-up runs.
+   * This is done by deduplication based on [content-defined chunking](https://restic.net/blog/2015-09-12/restic-foundation1-cdc) which is a way to reduce the number of bytes stored and transmitted: Each file is split into a number of variable length chunks and only chunks that have never been seen before are (compressed and) added to the repository.
+   * Algorithm details & choices:
+      * CDC=[Buzhash](https://en.wikipedia.org/wiki/Rolling_hash#Cyclic_polynomial)
+      * Compression=[Zstandard](https://facebook.github.io/zstd/)
       
-+ Confidentiality/Security: We encrypt the data because we assume data the location where the backup data is stored is **not** a trusted environment. 
-   - Algorithm details & choices:
-      - Cipher=[ChaCha20/(8)](https://en.wikipedia.org/wiki/Salsa20#ChaCha_variant)
+2. Confidentiality/Security: We encrypt the data because we assume data the location where the backup data is stored is **not** a trusted environment. 
+   * Algorithm details & choices:
+      * Cipher=[ChaCha20/(8)](https://en.wikipedia.org/wiki/Salsa20#ChaCha_variant)
+      * Cipher=[Aegis-128](https://competitions.cr.yp.to/caesar-submissions.html)
       
-+ Integrity/Verifiability
-   - We validate the data for accidental or intentional tampering (added, modified, deleted, etc.) because we assume data the location where the backup data is stored is **not** a trusted environment.
-   - This is done by [cryptographic message authentication codes](https://en.wikipedia.org/wiki/Message_authentication_code). 
+      * KDF=[Argon2id](https://github.com/p-h-c/phc-winner-argon2)
+      
+3. Integrity/Verifiability
+   * We validate the data for accidental or intentional tampering (added, modified, deleted, etc.) because we assume data the location where the backup data is stored is **not** a trusted environment.
+   * This is done by [cryptographic message authentication codes](https://en.wikipedia.org/wiki/Message_authentication_code). 
    ![Alt text](./MAC.svg)
-   - Algorithm details & choices:
-      - MAC=[BLAKE3 hash function (keyed mode)](https://github.com/BLAKE3-team/BLAKE3)
+   * Algorithm details & choices:
+      * MAC=[BLAKE3 hash function (keyed mode)](https://github.com/BLAKE3-team/BLAKE3)
       
-+ Availability/Durability: We encode the data with a forward error correction algorithm and disturbute it to our back-up targets.
-   - Algorithm details & choices:
-      + FEC=[Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
-      + FEC=[RaptorQ](https://github.com/openrq-team/OpenRQ/wiki/%22What-is-RaptorQ%3F%22)
-      + Hybrid-FEC=[STAIR](https://dl.acm.org/doi/pdf/10.1145/2658991?download=true)
+4. Availability/Durability: We encode the data with a forward error correction algorithm and disturbute it to our back-up targets.
+   * Algorithm details & choices:
+      * FEC=[Reed-Solomon](https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction)
+      * FEC=[RaptorQ](https://github.com/openrq-team/OpenRQ/wiki/%22What-is-RaptorQ%3F%22)
       
-      + [SoK paper comparing them (2010)](https://www.usenix.org/legacy/event/fast09/tech/full_papers/plank/plank.pdf)
-+ Referance programs & algorithms (Skim them):
-   - <https://restic.readthedocs.io/en/latest/100_references.html#design>
-   - <https://borgbackup.readthedocs.io/en/stable/internals.html>
-   - <https://www.tarsnap.com/>
-   - <http://0pointer.net/blog/casync-a-tool-for-distributing-file-system-images.html>
-   - <https://github.com/systemd/casync/blob/master/README.md>
-   - <https://github.com/redox-os/tfs/blob/master/README.rst#design-goals>
+      * Hybrid-FEC=[STAIR](https://dl.acm.org/doi/pdf/10.1145/2658991?download=true)
+      
+      * [SoK paper comparing them (2010)](https://www.usenix.org/legacy/event/fast09/tech/full_papers/plank/plank.pdf)
+
+* Referance programs & algorithms (Skim them):
+   * <https://restic.readthedocs.io/en/latest/100_references.html#design>
+   * <https://borgbackup.readthedocs.io/en/stable/internals.html>
+   * <https://www.tarsnap.com/>
+   * <http://0pointer.net/blog/casync-a-tool-for-distributing-file-system-images.html>
+   * <https://github.com/systemd/casync/blob/master/README.md>
+   * <https://github.com/redox-os/tfs/blob/master/README.rst#design-goals>
 
 #### Android App for Bilkent Library Catalog
 To be explained
@@ -50,11 +55,11 @@ To be explained
 
 #### Storage reverse engineering
 To be explained // by krg-bilkent
-https://github.com/bradfa/flashbench
-https://blog.stuffedcow.net/2019/09/hard-disk-geometry-microbenchmarking/
-https://lwn.net/Articles/428584/
-https://thelastmaimou.wordpress.com/2013/05/09/there-can-be-only-one/
-https://blogofterje.wordpress.com/2012/01/14/optimizing-fs-on-sd-card/
+* <https://github.com/bradfa/flashbench>
+* <https://blog.stuffedcow.net/2019/09/hard-disk-geometry-microbenchmarking/>
+* <https://lwn.net/Articles/428584/>
+* <https://thelastmaimou.wordpress.com/2013/05/09/there-can-be-only-one/>
+* <https://blogofterje.wordpress.com/2012/01/14/optimizing-fs-on-sd-card/>
 
 ## Resources
 
