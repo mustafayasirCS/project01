@@ -37,6 +37,7 @@
    - <https://www.tarsnap.com/>
    - <http://0pointer.net/blog/casync-a-tool-for-distributing-file-system-images.html>
    - <https://github.com/systemd/casync/blob/master/README.md>
+   - <https://github.com/redox-os/tfs/blob/master/README.rst#design-goals>
 
 #### Android App for Bilkent Library Catalog
 To be explained
