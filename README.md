@@ -73,6 +73,14 @@ To be explained // by krg-bilkent
    - and of course a strict style guide lines [here](https://web.archive.org/web/20170930110102/http://www.cs.bilkent.edu.tr/~david/cs101/practicalwork/2010/styleguidelines.htm).
 
 
++ First line of each and every source code starts with packaging,
++ continues with importings after a blank line
+  ```
+  package superPack.pack;
+  
+  import superPack.pack.src.Class;
+  import java.util.Xxxx;
+  ```
 ## About javadoc comments
 Usage of javadoc comments just before defining classes, constructors and methods is **mandatory**.
 1. Examples of styling
