@@ -53,13 +53,8 @@ To be explained
 #### General NFC Manager
 To be explained
 
-#### Storage reverse engineering
-To be explained // by krg-bilkent
-* <https://github.com/bradfa/flashbench>
-* <https://blog.stuffedcow.net/2019/09/hard-disk-geometry-microbenchmarking/>
-* <https://lwn.net/Articles/428584/>
-* <https://thelastmaimou.wordpress.com/2013/05/09/there-can-be-only-one/>
-* <https://blogofterje.wordpress.com/2012/01/14/optimizing-fs-on-sd-card/>
+#### Code Checking
+Code review tool to help students and TAs find and understand problems with CS101-CS102 code?
 
 ## Resources
 
