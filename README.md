@@ -114,10 +114,10 @@ Usage of javadoc comments just before defining classes, constructors and methods
     /**
     *  This method does blah blah blah
     * (if an instance method) changes blah blah properties in blah blah way
-    *  @return a logical value which is ObjectType (or a primitive value)
+    * @param paramName is blah blah blah
+    * @return a logical value which is ObjectType (or a primitive value)
     */
-   public ObjectType getName()
-   {
+   public ObjectType getName( Object paramName) {
    ...
    }
    ```
