@@ -2,6 +2,14 @@
 
 ## Project Proposals
 
+#### Map (?)
+To be explained
+
+##### Resources
+[About Open Street Map](https://www.openstreetmap.org/about)
+Open Street Map [export map](https://www.openstreetmap.org/export#map=14/39.8726/32.7637)
+Open Street Map [Develop-Wiki](https://wiki.openstreetmap.org/wiki/Develop)
+
 #### High availability back-up program
 
 ##### Main features
