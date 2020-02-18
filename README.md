@@ -9,7 +9,7 @@ To be explained
   * Open Street Map [export map](https://www.openstreetmap.org/export#map=14/39.8726/32.7637)
   * Open Street Map [Develop-Wiki](https://wiki.openstreetmap.org/wiki/Develop)
 
-#### High availability back-up program
+#### ~~High availability back-up program~~
 
 ##### Main features
 
@@ -51,13 +51,13 @@ To be explained
    * <https://github.com/systemd/casync/blob/master/README.md>
    * <https://github.com/redox-os/tfs/blob/master/README.rst#design-goals>
 
-#### Android App for Bilkent Library Catalog
+#### ~~~~Android App for Bilkent Library Catalog~~
 To be explained
 
-#### Product Tracing System
+#### ~~~~~~~~Product Tracing System~~~~~~
 To be explained
 
-#### General NFC Manager
+#### ~~~~General NFC Manager~~
 To be explained
 
 #### Code Checking
@@ -76,6 +76,7 @@ Code review tool to help students and TAs find and understand problems with CS10
 
 
 + First line of each and every source code starts with packaging,
+  + [Further reading](https://www.geeksforgeeks.org/packages-in-java/) that you may or may not find useful 
 + continues with importings after a blank line
   ```
   package superPack.pack;
@@ -83,8 +84,8 @@ Code review tool to help students and TAs find and understand problems with CS10
   import superPack.pack.src.Class;
   import java.util.Xxxx;
   ```
-## About javadoc comments
-Usage of javadoc comments just before defining classes, constructors and methods is **mandatory**.
+### About javadoc comments
+***Usage of javadoc comments just before defining classes, constructors and methods is mandatory.***
 1. Examples of styling
    * Before Classes
    ```
