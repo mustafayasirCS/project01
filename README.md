@@ -1,6 +1,7 @@
 # CS 102 Project for 2019-2020 Spring Semester in Bilkent
 
 ## Project Proposals
+Have a look at [here](http://www.cs.bilkent.edu.tr/~bgedik/coursewiki/doku.php/cs102:projects)
 
 #### Map (?)
 To be explained
